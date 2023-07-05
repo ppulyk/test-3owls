@@ -1,0 +1,93 @@
+{
+	"info": {
+		"_postman_id": "c131f6d7-b337-4e5e-8865-f6709c8a1b9f",
+		"name": "Indicators",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16248034",
+		"_collection_link": "https://grey-shuttle-449570.postman.co/workspace/TestJob~8c22ba3e-b983-472d-a3cf-689274ea41f1/collection/16248034-c131f6d7-b337-4e5e-8865-f6709c8a1b9f?action=share&creator=16248034&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "Get Indicators Id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"",
+							"pm.test(\"Your test name\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.value).to.eql(100);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://52.bex.su/api/indicators/18",
+					"protocol": "https",
+					"host": [
+						"52",
+						"bex",
+						"su"
+					],
+					"path": [
+						"api",
+						"indicators",
+						"18"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Classes",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://52.bex.su/api/classes/50",
+					"protocol": "https",
+					"host": [
+						"52",
+						"bex",
+						"su"
+					],
+					"path": [
+						"api",
+						"classes",
+						"50"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
